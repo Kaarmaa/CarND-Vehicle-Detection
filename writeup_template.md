@@ -19,9 +19,9 @@ create a heat map of recurring detections frame by frame to reject outliers and 
 * Estimate a bounding box for vehicles detected.
 
 [//]: # (Image References)
-[image1]: ./writeup/Load.jpg
-[image2]: ./writeup/Hog_Channels.jpg
-[image3]: ./writeup/Sliding_Window.jpg
+[image1]: ./writeup/Load.JPG
+[image2]: ./writeup/Hog_Channels.JPG
+[image3]: ./writeup/Sliding_Window.JPG
 [image4]: ./writeup/Hmap1.JPG
 [image5]: ./writeup/Hmap2.JPG
 [image6]: ./writeup/Hmap3.JPG
@@ -134,5 +134,9 @@ training of the SVM. There is a window of accuracy that ranges from ~98% to 99%,
 way the training set is distributed. I could force the split to always be identical, but this doesn't solve any issues
 when it comes to playing new data so I left it as is.
 
-The pipline doesn't severly fail in any point. It does sometimes have false positive detections, but they last only a 
-limited number of frames.
+The pipline doesn't severly fail in any point in the given data. It does sometimes have false positive detections, 
+but they last only a limited number of frames.
+
+If the data set were to be expanded to different environmental situations like Rain or Night, additional training data 
+would need to be provided to improve the SVM, although I am not completely sold on the idea of using cameras alone
+for classifications tasks when there is poor visibility.
